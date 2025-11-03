@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>pytest | Chen&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/img/icon.gif">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_3114978_qe0b39no76.css">
+    <meta name="description" content="Chen的博客">
+    <meta name="keywords" content="golang后端开发">
+    <meta name="baidu-site-verification" content="7F55weZDDc">
+    <meta name="theme-color" content="#11a8cd">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <link rel="preload" href="/assets/css/0.styles.9ad7f57e.css" as="style"><link rel="preload" href="/assets/js/app.acb4325c.js" as="script"><link rel="preload" href="/assets/js/2.c7928e56.js" as="script"><link rel="preload" href="/assets/js/44.1f6c98fb.js" as="script"><link rel="preload" href="/assets/js/4.25ccf190.js" as="script"><link rel="prefetch" href="/assets/js/10.1235cc7e.js"><link rel="prefetch" href="/assets/js/11.de508921.js"><link rel="prefetch" href="/assets/js/12.b509596f.js"><link rel="prefetch" href="/assets/js/13.5dc10029.js"><link rel="prefetch" href="/assets/js/14.ee784bae.js"><link rel="prefetch" href="/assets/js/15.768fec9d.js"><link rel="prefetch" href="/assets/js/16.bf59c07f.js"><link rel="prefetch" href="/assets/js/17.a69669b3.js"><link rel="prefetch" href="/assets/js/18.bf7fabb1.js"><link rel="prefetch" href="/assets/js/19.dbc37440.js"><link rel="prefetch" href="/assets/js/20.4d365e1b.js"><link rel="prefetch" href="/assets/js/21.b67eb03b.js"><link rel="prefetch" href="/assets/js/22.4929fac7.js"><link rel="prefetch" href="/assets/js/23.7c782040.js"><link rel="prefetch" href="/assets/js/24.6d77ca76.js"><link rel="prefetch" href="/assets/js/25.74873236.js"><link rel="prefetch" href="/assets/js/26.e764a5ae.js"><link rel="prefetch" href="/assets/js/27.46951a80.js"><link rel="prefetch" href="/assets/js/28.1ade51f9.js"><link rel="prefetch" href="/assets/js/29.cb546ab0.js"><link rel="prefetch" href="/assets/js/3.61f2bb41.js"><link rel="prefetch" href="/assets/js/30.c96f5710.js"><link rel="prefetch" href="/assets/js/31.e43dfc12.js"><link rel="prefetch" href="/assets/js/32.3075b353.js"><link rel="prefetch" href="/assets/js/33.d7f0848c.js"><link rel="prefetch" href="/assets/js/34.219020b1.js"><link rel="prefetch" href="/assets/js/35.62738319.js"><link rel="prefetch" href="/assets/js/36.4e717998.js"><link rel="prefetch" href="/assets/js/37.1d8fc5fc.js"><link rel="prefetch" href="/assets/js/38.bbf2cf2f.js"><link rel="prefetch" href="/assets/js/39.eddd320b.js"><link rel="prefetch" href="/assets/js/40.ee9946e3.js"><link rel="prefetch" href="/assets/js/41.8ba0d47d.js"><link rel="prefetch" href="/assets/js/42.ae72258b.js"><link rel="prefetch" href="/assets/js/43.afdf7c5f.js"><link rel="prefetch" href="/assets/js/45.e4e7efca.js"><link rel="prefetch" href="/assets/js/46.7a35dbd5.js"><link rel="prefetch" href="/assets/js/47.b9976b36.js"><link rel="prefetch" href="/assets/js/48.65217c42.js"><link rel="prefetch" href="/assets/js/49.cfbee314.js"><link rel="prefetch" href="/assets/js/5.0b9b655f.js"><link rel="prefetch" href="/assets/js/50.511c61c0.js"><link rel="prefetch" href="/assets/js/51.9ee92f3a.js"><link rel="prefetch" href="/assets/js/52.55e94662.js"><link rel="prefetch" href="/assets/js/6.7989e06a.js"><link rel="prefetch" href="/assets/js/7.a0606839.js"><link rel="prefetch" href="/assets/js/8.26e02e34.js"><link rel="prefetch" href="/assets/js/9.5639569a.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9ad7f57e.css">
+  </head>
+  <body class="theme-mode-light">
+    <div id="app" data-server-rendered="true"><div class="theme-container sidebar-open only-sidebarItem"><header class="navbar blur"><div title="目录" class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/icon.gif" alt="Chen's blog" class="logo"> <span class="site-name can-hide">Chen's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="导航🚀" class="dropdown-title"><a href="/navigate/" class="link-title">导航🚀</a> <span class="title" style="display:none;">导航🚀</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/fd9d0e/" class="nav-link">编程</a></li><li class="dropdown-item"><!----> <a href="/pages/7c6fa6/" class="nav-link">资源</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="自动化" class="dropdown-title"><a href="/autoTest/" class="link-title">自动化</a> <span class="title" style="display:none;">自动化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/golang/" class="nav-link">Golang</a></li><li class="dropdown-item"><!----> <a href="/micro/" class="nav-link">微服务</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="性能" class="dropdown-title"><a href="/front/" class="link-title">性能</a> <span class="title" style="display:none;">性能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue/" class="nav-link">vue</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机" class="dropdown-title"><a href="/computer/" class="link-title">计算机</a> <span class="title" style="display:none;">计算机</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/" class="nav-link">操作系统</a></li><li class="dropdown-item"><!----> <a href="/algo/" class="nav-link">数据结构与算法</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">Linux</a></li></ul></div></div><div class="nav-item"><a href="/pages/0cdda0/404" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/codecjz" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar-hover-trigger"></div> <aside class="sidebar" style="display:none;"><div class="blogger"><img src="/img/avatar.jpg"> <div class="blogger-info"><h3>Chen</h3> <span>跑起来吧</span></div></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">首页</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="导航🚀" class="dropdown-title"><a href="/navigate/" class="link-title">导航🚀</a> <span class="title" style="display:none;">导航🚀</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/pages/fd9d0e/" class="nav-link">编程</a></li><li class="dropdown-item"><!----> <a href="/pages/7c6fa6/" class="nav-link">资源</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="自动化" class="dropdown-title"><a href="/autoTest/" class="link-title">自动化</a> <span class="title" style="display:none;">自动化</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/golang/" class="nav-link">Golang</a></li><li class="dropdown-item"><!----> <a href="/micro/" class="nav-link">微服务</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="性能" class="dropdown-title"><a href="/front/" class="link-title">性能</a> <span class="title" style="display:none;">性能</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue/" class="nav-link">vue</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机" class="dropdown-title"><a href="/computer/" class="link-title">计算机</a> <span class="title" style="display:none;">计算机</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/os/" class="nav-link">操作系统</a></li><li class="dropdown-item"><!----> <a href="/algo/" class="nav-link">数据结构与算法</a></li><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">Linux</a></li></ul></div></div><div class="nav-item"><a href="/pages/0cdda0/404" class="nav-link">关于</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="索引" class="dropdown-title"><a href="/archives/" class="link-title">索引</a> <span class="title" style="display:none;">索引</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/" class="nav-link">分类</a></li><li class="dropdown-item"><!----> <a href="/tags/" class="nav-link">标签</a></li><li class="dropdown-item"><!----> <a href="/archives/" class="nav-link">归档</a></li></ul></div></div> <a href="https://github.com/codecjz" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/pages/0cdda0/" aria-current="page" class="active sidebar-link">pytest</a></li></ul> </aside> <div><main class="page"><div class="theme-vdoing-wrapper "><div class="articleInfo-wrap" data-v-06225672><div class="articleInfo" data-v-06225672><ul class="breadcrumbs" data-v-06225672><li data-v-06225672><a href="/" title="首页" class="iconfont icon-home router-link-active" data-v-06225672></a></li> <li data-v-06225672><a href="/interfaceTest/#接口自动化测试" data-v-06225672>接口自动化测试</a></li></ul> <div class="info" data-v-06225672><div title="作者" class="author iconfont icon-touxiang" data-v-06225672><a href="https://github.com/codecjz" target="_blank" title="作者" class="beLink" data-v-06225672>Chen</a></div> <div title="创建时间" class="date iconfont icon-riqi" data-v-06225672><a href="javascript:;" data-v-06225672>2024-08-10</a></div> <!----></div></div></div> <!----> <div class="content-wrapper"><!----> <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAABH1JREFUSA3tVl1oHFUUPmdmd2ltklqbpJDiNnXFmgbFktho7YMPNiJSSZM0+CAYSkUELVhM6YuwIPpgoOKDqOBDC0XE2CQoNtQXBUFTTcCi+Wlh1V2TQExsUzcltd3M9Tt3ZjZzZ2fT+OJTL8yeM+eee757fmeJbq//KQL8X3DUSFOcfr7cRsRtxNQMWueeVzOkaITIGqQHNg5y8+jNW9ldM7A6nTpAjuolUikAwq7CE3WcM2RRDz+XGVgN3FptU/aUSlvq9Pa3iZ1+sgAqJyyAFqkipd9dqiwHF3P65YycLWc/6sqGrvoEoIp6DOFaX5h6+dnfjkWprwqsPk0dUGq5vySwDImC10KxFHgGL1SWoc92O3eVht09qdXNH11I2SsTsJYqMWzihqGMi+A+Garf3BAuuLI5oGlULyNfyB/HYNujwktOfRrMr5t77NmevqaUopx0grnKAyvVpmwUDB4x6FPXuGvYLTDwWsejwgtgkYKPqRJg8SV6xaiZ3ZTppGneS4yfH5/66fZSDHv+QZci/+h5c5UHtpy67JUqGppM0sh0Nc1dW6/N1W5Yoqat8/TU/VnadmdeW2PLLSyh0cvxBs3KbqTmwYPpxN4do/mzE8nEpvX/UMu2Wbp74zUAK5q6WkHns7V0eWkdPbPzd3rxkTGybadYySumVzhcaJFbs5UrEkQ/+CK8gF5dnh/6ciIZ73gwQ927L1IitoxKLXYP3SjYdOrHHfTZhRRlFyrorafPk20B3HPD1y2G3qKZME5Jcf3t/HUC13/8tSd++vqFveMUTwAUxSUFI1QekR1+bIze3D9MF2aq6cPvG72CgnldWCFqyRw3lwH8ZMerjTD9ElRO7Gv44wNpC90aASqGfVlz/Rx17srQ57/UU26hkhQqUB7dBR71WmzQhHUnblGmVOEw0jhbV1n9OlXUDCIRGaNV5Jp43N516fN7JmnTHdfp7Hgy0luO4aMhtkLL8Bi3bUWYvzh5Mn1dTxrL6QmGuRhGL/TiTTxRoEdTszSaq9GR0NGA3KdkOz3hqSV3MIDhQ5IVX/Ivx3umBti2es2h4eZby7x8br1rkf7Mo90AqC8aQ3sJeNzqFRu+vSANAQe3PL7l0HGOAdwDCeZYvNKeoZp1Qfs6Aipndh86HmFRi0LAnEO47wsqM6cdfjh3jBPUzhZy7nvlUfFsamED1VQt6aISHVymXZ/B2aCtIG8AI8xfobj2d3en1wWVhOeHELKmLQ1s211s88comkv4UCwWyF787mJdYXtNfhKAXVqnKTq8QZvGAGGOfaTo5pGZ/PwbUCr5+DPr/1J92JNHr9aOl/F3iI5+O1nfybsGxoimvZ3ViWSluDITw3P37mypheDIPY0tw7+O/5ApbkYw+zpfaUVu32Pi98+defdUhEpZkRFq0aqyNh9FuL9hpYbEm6iwi0z2REd09ZmyENEbuhjDWzKvZXTqKYaBIr3tt5kuPtQBZFvEUwHt60vfCNu41XsksH9Ij1BMMz1Y0OOunHNShFIP5868g5zeXmuLwL9T4b6Q2+KejgAAAABJRU5ErkJggg==">pytest<!----></h1>  <div class="theme-vdoing-content content__default"><p>**一、unittest和pytest框架对比 **
+**1.unittest框架介绍 **
+Unittest是Python标准库中自带的单元测试框架，Unittest有时候也被称为PyUnit，就像
+JUnit是Java语言的标准单元测试框架一样，Unittest则是Python语言的标准单元测试框
+架。
+Unittest支持自动化测试，测试用例的初始化、关闭和测试用例的聚合等功能，它有一个很
+重要的特性：它是通过类(class)的方式，将测试用例组织在一起。
+*<em>2.pytest框架介绍 **
+Pytest是Python的另一个第三方单元测试库。它的目的是让单元测试变得更容易，并且也
+能扩展到支持应用层面复杂的功能测试。
+pytest的特性有：
+支持用简单的assert语句实现丰富的断言，无需复杂的self.assert<em>函数
+自动识别测试模块和测试函数
+模块化夹具用以管理各类测试资源
+对 unittest 完全兼容，对 nose基本兼容
+支持Python3和PyPy3
+丰富的插件生态，已有1118个各式各样的插件，社区繁荣
+插件链接：https://docs.pytest.org/en/latest/reference/plugin_list.html
+**3.unittest和pytest框架对比 **
+**4.pytest 安装 **
+a)安装
+pip install pytest
+b)验证安装
+pytest --version
+c) 运行模式的配置
+d) pytest文档
+官方文档：https://docs.pytest.org/en/latest/contents.html
+3.pytest的用例运行规则
+1）pytest将在当前目录及其子目录中运行所有格式为test_</em>.py或者</em>_test.py文件
+2）测试方法/测试函数 默认必须是test开头
+3） 测试类必须是Test开头
+4） 测试类不能有构造方法 <strong>init</strong>
+**二、Pytest的常用应用 **
+**1.断言pytest **
+借助Python的运算符号 和 assert关键字 来实现的。
+**2.pytest常用运行参数 **
+&quot;-s&quot; 参数 用于关闭捕捉，从而输出打印信息到控制台
+&quot;-v&quot; 参数 用于显示具体的用例执行信息‘
+通过Pytest --help 查看帮助
+1）运行名称中包含某字符串的测试用例
+-k
+2) 简化输出信息
+-q
+3) 如果出现一条测试用例失败，则退出测试
+-x
+4) 指定目录以及特定类或方法执行
+pytest.main(['-s','./doc/test_112233.py::TestDemo::test_case_03'])
+**3.生成测试报告 **
+生成junit xml文件测试报告
+**4.用例失败控制 **
+在第N个很用例失败之后，结束测试执行
+pytest.main(['--maxfail=2'])
+**5.通过标记表达式执行 **
+pytest.main(['-m','smoke'])
+这条命令会执行被
+装饰器 @pytest.mark.smoke 装饰的所有测试用例
+先在pytest.ini 文件中注册自定义标记
+**6.多进程运行用例 **
+安装pytest-xdist:
+pip install pytest-xdist</p> <h1 id="将测试执行发送到多个cpu"><a href="#将测试执行发送到多个cpu" class="header-anchor">#</a> 将测试执行发送到多个cpu</h1> <h1 id="pytest-main-n-2-test-many-py"><a href="#pytest-main-n-2-test-many-py" class="header-anchor">#</a> pytest.main(['-n','2','test_many.py'])</h1> <h1 id="使用与计算机具有cpu内核一样多的进程"><a href="#使用与计算机具有cpu内核一样多的进程" class="header-anchor">#</a> 使用与计算机具有cpu内核一样多的进程</h1> <p>pytest.main(['-n', 'auto', 'test_many.py'])
+**PS：最新版本的pytest和插件发现跑不起来 **
+已验证可运行版本：
+pytest:6.1.2 pytest-xdist 1.31.0
+**7.重新运行失败用例 **
+pytest-rerunfailures是一个可以使pytest重新运行测试的插件，以消除间歇性故障。
+安装要求：
+您需要具备以下先决条件才能使用pytest-rerunfailures：
+安装
+pip install pytest-rerunfailures
+Python 3.5，最高3.8或PyPy3
+pytest 5.0或更高版本
+目前已针对最近的5个次要pytest版本测试了该软件包。如果您使用的是较早版本的
+pytest，则应考虑更新或使用此软件包的较早版本之一。</p> <h1 id="重新运行所有测试失败用例"><a href="#重新运行所有测试失败用例" class="header-anchor">#</a> 重新运行所有测试失败用例</h1> <p>pytest.main(['--reruns', '3', 'test_rerun.py'])</p> <h1 id="在每次重跑之间-增加一次延迟时间"><a href="#在每次重跑之间-增加一次延迟时间" class="header-anchor">#</a> 在每次重跑之间，增加一次延迟时间</h1> <p>pytest.main(['--reruns', '3','--reruns-delay','2','test_rerun.py'])
+**8.pytest的setup和teardown函数 **
+用例前置和后置
+setup和teardown 可以在类的外面和里面使用
+**9.pytest配置文件 **
+pytest.ini文件中如果有中文，可能会出编码问题，需要把文件设置为gbk
+1.选择pytest.ini文件
+2.点击 file选项
+3.选择 File Encoding后
+4.选择 GBK
+5.选择convert
+**10.pytest常用插件 **
+插件列表网址：https://docs.pytest.org/en/latest/reference/plugin_list.html
+pytest-html插件
+安装：
+pip install pytest-html
+使用方法： 命令行格式：pytest --html=用户路径/report.html
+**三、Pytest高阶用法之函数数据参数化 **
+单参数、多参数、函数数据参数化
+方法：
+parametrize(argnames, argvalues, indirect=False, ids=None, scope=None)
+常用参数：
+argnames：参数名
+argvalues：参数对应值，类型必须为list
+当参数为一个时格式：[value]
+当参数个数大于一个时，格式为:[(param_value1,param_value2.....),
+(param_value1,param_value2.....)]
+使用方法:
+@pytest.mark.parametrize(argnames,argvalues)
+参数值为N个，测试方法就会运行N次
+**四、Pytest之Fixture介绍 **
+官方原话：
+https://docs.pytest.org/en/latest/explanation/fixtures.html#about-fixtures
+pytest fixtures被设计为明确的、模块化的以及可扩展的
+什么是fixtures
+在测试中，fixture为测试提供了已定义的，可靠的和一致的上下文。这可能包括环境（例
+如，通过已知的参数配置数据库）或内容（例如，数据集）。
+<strong>Fixtures定义了构成测试准备阶段的步骤和数据</strong>。在pytest中，它们是为这些目的而定义的
+函数。它们也可以用来定义测试执行阶段；这是一个设计复杂用例的强大技术。
+测试功能通过参数访问由fixtures设置的服务，状态或其他操作环境。对于测试功能使用的
+每个fixture，通常在测试功能的定义中都有一个参数（在 fixture后命名）。
+**我们可以通过用修饰器@pytest.fixture来告诉pytest某个特定函数是一个fixture **。
+**五、Conftest.py **
+conftest.py是pytest特有的本地测试配置文件，既可以用力啊设置项目级的Fixture,也可以
+用来导入外部插件，还可以用来指定Hook函数（钩子函数）
+conftest.py文件名称是固定，pytest会自动识别该文件，只作用于它所在的目录及子目录
+**六、Conftest.py+fixture+yield 实现用例前置后 **
+**置 **
+通过Conftest.py+fixture+yield，可轻松实现用例前置后置，包括项目级的
+1 #coding=gbk
+2 import pytest
+3
+4 @pytest.fixture()
+5 def fix1():
+6 print(&quot;\n开始执行fix1&quot;)
+7 yield
+8 print(&quot;\n结束执行fix1&quot;)</p></div></div>  <div class="page-edit"><!----> <!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2024/08/10, 23:52:52</span></div></div> <div class="page-nav-wapper"><!----> <!----></div></div> <div class="article-list"><div class="article-title"><a href="/archives/" class="iconfont icon-bi">最近更新</a></div> <div class="article-wrapper"><dl><dd>01</dd> <dt><a href="/pages/0b8d99/"><div>
+            UI入门
+            <!----></div></a> <span class="date">08-10</span></dt></dl><dl><dd>02</dd> <dt><a href="/pages/14e495/"><div>
+            关于
+            <!----></div></a> <span class="date">08-10</span></dt></dl><dl><dd>03</dd> <dt><a href="/pages/e59838/"><div>
+            vue3快速上手
+            <!----></div></a> <span class="date">07-31</span></dt></dl> <dl><dd></dd> <dt><a href="/archives/" class="more">更多文章&gt;</a></dt></dl></div></div></main></div> <div class="footer"><div class="icons"><a href="mailto:LSY921703959@163.com" title="发邮件" target="_blank" class="iconfont icon-youjian"></a><a href="https://github.com/codecjz" title="GitHub" target="_blank" class="iconfont icon-github"></a><a href="https://music.163.com/#/playlist?id=755597173" title="听音乐" target="_blank" class="iconfont icon-erji"></a></div> 
+  Theme by
+  <a href="https://github.com/xugaoyi/vuepress-theme-vdoing" target="_blank" title="本站主题">Vdoing</a> 
+    | Copyright © 2023-2025
+    <span>Chen | <a href="https://github.com/codecjz" target="_blank">MIT License</a></span></div> <div class="buttons"><div title="返回顶部" class="button blur go-to-top iconfont icon-fanhuidingbu" style="display:none;"></div> <div title="去评论" class="button blur go-to-comment iconfont icon-pinglun" style="display:none;"></div> <div title="主题模式" class="button blur theme-mode-but iconfont icon-zhuti"><ul class="select-box" style="display:none;"><li class="iconfont icon-zidong">
+          跟随系统
+        </li><li class="iconfont icon-rijianmoshi">
+          浅色模式
+        </li><li class="iconfont icon-yejianmoshi">
+          深色模式
+        </li><li class="iconfont icon-yuedu">
+          阅读模式
+        </li></ul></div></div> <!----> <!----> <!----></div><div class="global-ui"><div id="goTop" class="hide-cat" data-v-bf92849a></div><div></div><div></div></div></div>
+    <script src="/assets/js/app.acb4325c.js" defer></script><script src="/assets/js/2.c7928e56.js" defer></script><script src="/assets/js/44.1f6c98fb.js" defer></script><script src="/assets/js/4.25ccf190.js" defer></script>
+  </body>
+</html>
